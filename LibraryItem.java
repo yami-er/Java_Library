@@ -22,6 +22,11 @@ public class LibraryItem {
    public void setNumberOfCopy(int numberOfCopy){
     this.numberOfCopy = numberOfCopy;
    }
+   //creating a method to set the amount of loan days
+   public int loanDays(){
+       return 7;
+   }
+
 }
 
 
