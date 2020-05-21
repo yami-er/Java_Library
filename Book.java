@@ -41,11 +41,15 @@ public class Book extends LibraryItem{
     public void setEdition(int edition){
     this.edition= edition;
     }
-    public void setUsed(String used){
+    public void setUsed(boolean used){
     this.used = used;
     }
-    public void setHardCover(String hardCover){
+    public void setHardCover(boolean hardCover){
     this.hardCover = hardCover;
     }
-
+    //to override the method from library item
+    @Override
+    public int loanDays(){
+      return super.loanDays() + 7;
+    }
 }
