@@ -1,7 +1,14 @@
 public class Megazine extends Periodical {
-    public Megazine(String title, String authorName, int yearPublished, int numberOfCopy,
-    int edition, boolean used, boolean hardCover,String publishedDuration, string type){
-        super(title, authorName, yearPublished, numberOfCopy, edition, used, hardCover);
-        
+    int numberOfPages;
+    public Megazine(String title,int numberOfCopy,String publishedFrequency, String type, String volume,int numberOfPages){
+        super(title, numberOfCopy, publishedFrequency, type, volume);
+        this.numberOfPages= numberOfPages;
     }  
+     //getter and setter 
+     public int getNumberOfPages(){
+        return numberOfPages;
+    }
+    public void setNumberOfPages(int numberOfPages){
+       this.numberOfPages = numberOfPages;
+    }
 }
