@@ -1,10 +1,11 @@
+import java.util.*;
 public class Video extends LibraryItem{
     //add more variables for video
     boolean highDefinition;
     boolean rated;
     boolean cartoon;
-    public Video(String title, int numberOfCopy,boolean highDefinition, boolean rated, boolean cartoon){
-        super(title, numberOfCopy);
+    public Video(String title, int numberOfCopy,boolean highDefinition, boolean rated, boolean cartoon, List<Author> authors, List<PublishingCompany> publishingCompany){
+        super(title, numberOfCopy,authors,publishingCompany);
         this.highDefinition= highDefinition;
         this.rated = rated;
         this.cartoon = cartoon;
@@ -34,4 +35,5 @@ public class Video extends LibraryItem{
     public int loanDays(){
       return super.loanDays() + 3;
     }
+   
 }
