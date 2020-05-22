@@ -1,7 +1,8 @@
+import java.util.*;
 public class NewsPaper extends Periodical {
     String editor;
-    public NewsPaper(String title,int numberOfCopy,String publishedFrequency, String type, String volume,String editor){
-            super(title, numberOfCopy, publishedFrequency, type, volume);
+    public NewsPaper(String title,int numberOfCopy,String publishedFrequency, String type, String volume,String editor,List<Author> authors, List<PublishingCompany> publishingCompany){
+            super(title, numberOfCopy, publishedFrequency, type, volume,authors,publishingCompany);
              this.editor = editor;
         
         }
