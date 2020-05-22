@@ -1,3 +1,4 @@
+import java.util.*;
 public class Book extends LibraryItem{
 
     String authorName;
@@ -7,8 +8,8 @@ public class Book extends LibraryItem{
     boolean hardCover;
 
     public Book(String title, String authorName, int yearPublished, int numberOfCopy,
-    int edition, boolean used, boolean hardCover){
-        super(title, numberOfCopy);
+    int edition, boolean used, boolean hardCover, List<Author> authors, List<PublishingCompany> publishingCompany){
+        super(title, numberOfCopy,authors,publishingCompany);
         this.authorName = authorName;
         this.yearPublished = yearPublished;
         this.edition = edition;
@@ -52,4 +53,10 @@ public class Book extends LibraryItem{
     public int loanDays(){
       return super.loanDays() + 7;
     }
+    //to override the interface
+    @Override
+    public boolean reservable(){
+        return false;
+    }  
+
 }
