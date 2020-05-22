@@ -1,9 +1,10 @@
+import java.util.*;
 public class GeneralBook extends Book{
     //set new variable local
     String genre;
     public GeneralBook(String title,String authorName, int yearPublished, int numberOfCopy,
-    int edition, boolean used, boolean hardCover,String genre){
-        super(title, authorName, yearPublished, numberOfCopy, edition, used, hardCover);
+    int edition, boolean used, boolean hardCover,String genre,List<Author> authors, List<PublishingCompany> publishingCompany){
+        super(title, authorName, yearPublished, numberOfCopy, edition, used, hardCover,authors,publishingCompany);
         this.genre = genre;
     }
     //getter & setter
