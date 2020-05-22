@@ -1,3 +1,4 @@
+import java.util.*;
 public class Periodical extends LibraryItem{
     //adding the variable local to the periodical class(child class)
     private String publishedFrequency;
@@ -5,8 +6,8 @@ public class Periodical extends LibraryItem{
     private String volume;
 
         public Periodical(String title,int numberOfCopy,
-        String publishedFrequency, String type, String volume){
-            super(title,numberOfCopy);
+        String publishedFrequency, String type, String volume, List<Author> authors, List<PublishingCompany> publishingCompany){
+            super(title,numberOfCopy,authors,publishingCompany);
             this.publishedFrequency = publishedFrequency;
             this.type = type;
             this.volume = volume;
