@@ -1,9 +1,10 @@
+import java.util.*;
 public class Audio extends LibraryItem{
     //add more variables for audio 
     boolean highDefinition;
     int length;
-    public Audio(String title, int numberOfCopy,boolean highDefinition, int length){
-        super(title, numberOfCopy);
+    public Audio(String title, int numberOfCopy,boolean highDefinition, int length,List<Author> authors, List<PublishingCompany> publishingCompany){
+        super(title, numberOfCopy,authors,publishingCompany);
         this.highDefinition= highDefinition;
         this.length= length;
     }
@@ -26,4 +27,9 @@ public class Audio extends LibraryItem{
     public int loanDays(){
       return super.loanDays() + 3;
     }
+    //overriding interface
+    @Override
+    public boolean reservable(){
+        return false;
+    }  
 }
